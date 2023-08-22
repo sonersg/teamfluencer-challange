@@ -4,7 +4,7 @@ import Users from "./components/Users";
 import Filter from "./components/Filter";
 import { usersArray } from "./users/usersArray";
 import { Route, Routes, useLocation } from "react-router-dom";
-import UserDetailes from "./components/UserDetailes";
+import UserDetailes from "./components/UserDetails";
 
 function App() {
     const [users, setusers] = useState(usersArray);
