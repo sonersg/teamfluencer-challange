@@ -236,7 +236,7 @@ export interface UserDoc extends Document {
     score: number;
     email: string;
     gender: string;
-    profile_complete: Boolean;
+    // profile_complete: Boolean;
     school_type: string;
     school_name: string;
     city: string;
@@ -246,7 +246,7 @@ export interface UserDoc extends Document {
         paparaAccountNo: number;
         current: number;
         currency: string;
-        exchanges: MoneyExchangeItemUser[];
+        // exchanges: MoneyExchangeItemUser[];
         city: string;
         county: string;
         name: string;
@@ -257,25 +257,25 @@ export interface UserDoc extends Document {
     sharing_type: string;
     last_login: Date;
     applications_update: Date;
-    hasNotificationPermission: Boolean;
+    // hasNotificationPermission: Boolean;
     onesignal_pushToken: string;
     onesignal_userId: string;
     currency: string;
-    password: Number;
+    // password: Number;
     passwordTime: Date;
-    verification: Boolean;
-    denied_verification: Boolean;
+    // verification: Boolean;
+    // denied_verification: Boolean;
     verification_last_action: Date;
 
-    deleted: Boolean;
-    address: UserAddress;
+    // deleted: Boolean;
+    // address: UserAddress;
     deviceInfo: any;
 }
 
 export interface TiktokData {
     tiktok_last_scrape: Date;
-    tiktok_average_like: Number;
-    tiktok_engagement_rate: Number;
+    // tiktok_average_like: Number;
+    // tiktok_engagement_rate: Number;
     tiktok_access_token: string;
     tiktok_refresh_token: string;
     open_id: string;
@@ -335,14 +335,14 @@ export interface InstaData {
         media_url: string;
         like_count: number;
         comment_count: number;
-        description: String;
-        location: {
-            name: String;
-            address: String;
-            city: String;
-            lng: Number;
-            lat: Number;
-        };
+        // description: String;
+        // location: {
+        //     name: String;
+        //     address: String;
+        //     city: String;
+        //     lng: Number;
+        //     lat: Number;
+        // };
         face_details: any;
         moderation_labels: any;
     }[];

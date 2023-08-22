@@ -1,13 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 import Users from "./components/Users";
+import Filter from "./components/Filter";
+import { usersArray } from "./users/usersArray";
 
 function App() {
-    const [count, setCount] = useState(0);
+    const [users, setusers] = useState(usersArray);
 
     return (
-        <div>
-            <h1>{count}</h1>
+        <div className="container">
+            <Filter />
             <Users />
         </div>
     );
