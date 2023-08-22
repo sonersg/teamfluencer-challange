@@ -32,6 +32,7 @@ body {
 }
 
 h1,
+h2,
 h3,
 h4,
 h5,
@@ -39,6 +40,10 @@ h6,
 p {
     margin: 0;
     padding: 0;
+}
+
+.link {
+    text-decoration: underline;
 }
 
 img {
@@ -71,7 +76,7 @@ input {
     transition: all ease-in-out 0.3s;
 }
 .card:hover {
-    transform: scale(110%) translateY(-10px);
+    transform: scale(105%) translateY(-5px);
     background-color: #212453;
 }
 

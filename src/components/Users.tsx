@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import { useContext } from "react";
 
@@ -20,6 +21,12 @@ function Users() {
 
                     <p>Tiktok videos: {user.userDoc.tiktok.videos.length}</p>
                     <p>Tiktok Likes: {user.userDoc.tiktok.hearts}</p>
+
+                    <h2>
+                        <Link className="link" to={`/${user.userDoc.phone}`}>
+                            User Detailes
+                        </Link>
+                    </h2>
                 </div>
             ))}
         </div>
