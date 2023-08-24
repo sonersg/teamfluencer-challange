@@ -10,7 +10,7 @@ export const usersArray = [
                 last_scrape: new Date(),
                 id: "string",
                 access_token: "string",
-                username: "string",
+                username: "username1",
                 full_name: "string",
                 biography: "string",
                 profile_pic:
@@ -142,7 +142,7 @@ export const usersArray = [
                 last_scrape: new Date(),
                 id: "string",
                 access_token: "string",
-                username: "string",
+                username: "username2",
                 full_name: "string",
                 biography: "string",
                 profile_pic:
@@ -274,7 +274,7 @@ export const usersArray = [
                 last_scrape: new Date(),
                 id: "string",
                 access_token: "string",
-                username: "string",
+                username: "username3",
                 full_name: "string",
                 biography: "string",
                 profile_pic:

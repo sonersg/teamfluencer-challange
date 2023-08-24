@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
-import { UserContext } from "../context/UserContext";
+import { FilteredUsersContext } from "../context/FilteredUsersContext";
 import { useContext } from "react";
 
 function Users() {
-    const data = useContext(UserContext);
+    const { filteredUsers } = useContext(FilteredUsersContext);
     return (
-        <div>
-            {data.users.map(user => (
+        <div className="users-container">
+            {filteredUsers.map(user => (
                 <div key={user.userDoc.phone} className="card">
-                    <h3>
-                        {user.userDoc.name} {user.userDoc.surname}
-                    </h3>
+                    <h3>{user.userDoc.insta.username}</h3>
                     <img
                         src={user.userDoc.insta.profile_pic}
                         alt="Instagram profile pic"
