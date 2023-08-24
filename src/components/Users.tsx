@@ -4,6 +4,8 @@ import { useContext } from "react";
 
 function Users() {
     const { filteredUsers } = useContext(FilteredUsersContext);
+
+    // Read and render the filtered users from "FilteredUsersContext"
     return (
         <div className="users-container">
             {filteredUsers.map(user => (
@@ -14,14 +16,43 @@ function Users() {
                         alt="Instagram profile pic"
                     />
 
-                    <p>Instagram Posts: {user.userDoc.insta.post_number}</p>
-                    <p>Instagram Likes: {user.userDoc.insta.average_like}</p>
+                    <div
+                        style={{
+                            color: "#fff",
+                            textAlign: "start",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                        }}
+                    >
+                        <p>
+                            <span className="opacity-50">
+                                Instagram Posts:{" "}
+                            </span>
+                            <span>{user.userDoc.insta.post_number}</span>
+                        </p>
+                        <p>
+                            <span className="opacity-50">
+                                Instagram Likes:{" "}
+                            </span>
+                            <span>{user.userDoc.insta.average_like}</span>
+                        </p>
 
-                    <p>Tiktok videos: {user.userDoc.tiktok.videos.length}</p>
-                    <p>Tiktok Likes: {user.userDoc.tiktok.hearts}</p>
+                        <p>
+                            <span className="opacity-50">Tiktok videos: </span>
+                            <span>{user.userDoc.tiktok.videos.length}</span>
+                        </p>
+                        <p>
+                            <span className="opacity-50">Tiktok Likes: </span>
+                            <span>{user.userDoc.tiktok.hearts}</span>
+                        </p>
+                    </div>
 
                     <h2>
-                        <Link className="link" to={`/${user.userDoc.phone}`}>
+                        <Link
+                            className="link"
+                            to={`/${user.userDoc.insta.username}`}
+                        >
                             User Detailes
                         </Link>
                     </h2>

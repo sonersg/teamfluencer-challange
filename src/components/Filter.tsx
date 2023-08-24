@@ -3,6 +3,10 @@ import { UsersContext } from "../context/UsersContext";
 import { UserDoc } from "../types/User-Model-Challenge";
 import { FilteredUsersContext } from "../context/FilteredUsersContext";
 
+export interface User {
+    userDoc: UserDoc;
+}
+
 function Filter() {
     const [input, setInput] = useState("");
     const { users } = useContext(UsersContext);
@@ -11,10 +15,6 @@ function Filter() {
     /////////////////////////////////////////////////////
     ////////// FILTER FUNCTION START
     //////////////////////////////////////////////////////
-
-    interface User {
-        userDoc: UserDoc;
-    }
 
     const filterUsersArray = (
         usersArray: User[],
@@ -56,18 +56,24 @@ function Filter() {
     const searchString = input.toLocaleLowerCase();
     const filteredUsers = filterUsersArray(users, searchString);
 
-    // Set filtered users array in filtered users context
+    // Update the filtered users state in "FilteredUsersContext"
     useEffect(() => {
         setFilteredUsers(filteredUsers);
     }, [input]);
 
     return (
         <div className="filter-container">
-            <label htmlFor="filter">Filter through users.</label>
+            <label
+                htmlFor="filter"
+                title="You can filter through with any kind of value provided in user detailes"
+            >
+                Filter through users.
+            </label>
             <input
                 type="text"
                 id="filter"
                 placeholder="Search"
+                title="You can filter through with any kind of value provided in user detailes"
                 value={input}
                 onChange={e => setInput(e.target.value)}
             />

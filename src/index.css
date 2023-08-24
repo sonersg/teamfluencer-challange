@@ -50,7 +50,16 @@ img {
     /* display: block; */
     width: 200px;
     height: 200px;
+    object-fit: cover;
     border-radius: 50%;
+    margin: 1rem;
+}
+
+.img-in-details {
+    /* display: block; */
+    width: 84%;
+    height: auto;
+    border-radius: 0.3em;
     margin: 1rem;
 }
 
@@ -64,6 +73,11 @@ img {
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+}
+
+.details-container {
+    text-align: center;
+    color: #fff;
 }
 
 input {
@@ -82,6 +96,16 @@ input {
 .card:hover {
     transform: scale(105%) translateY(-5px);
     background-color: #212453;
+}
+
+.flex--items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opacity-50 {
+    opacity: 50%;
 }
 
 button {
@@ -123,5 +147,18 @@ button:focus-visible {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+    }
+
+    .img-in-details {
+        width: 50%;
+        height: auto;
+        border-radius: 0.3em;
+        margin: 1rem;
+    }
+
+    .details-container {
+        display: flex;
+        justify-content: space-between;
+        text-align: start;
     }
 }

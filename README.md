@@ -1,4 +1,4 @@
-# 20th of August, Sunday, 2023
+20th of August, Sunday, 2023
 
 ---
 
@@ -6,26 +6,50 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+---
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Teamfluencer Intern Challange
 
-## Expanding the ESLint configuration
+Develop a React app that lists influencer profiles, showing basic information about influencers who have applied for a brand collaboration or campaign.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Display influencers' TikTok and Instagram data, posts, likes, engagement, etc.
 
--   Configure the top-level `parserOptions` property like this:
+Implement a feature to allow campaign owner brands to filter profiles according to the sample user model elements provided.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Table of Contents
+
+-   [About](#about)
+-   [Demo](#demo)
+-   [Installation](#installation)
+-   [Technologies Used](#technologies-used)
+
+## About
+
+There are three sample users. You can type any key values to filter the users şn the search bar.
+
+## Demo
+
+[On Netlify](https://teamfluencer-challange-soner.netlify.app)
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/sonersg/teamfluencer-challange.git
+
+# Navigate to the project directory
+cd teamfluencer-challange
+
+# Install dependencies
+npm install
+npm i react-router-dom
+npm i react-icons
 ```
 
--   Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
--   Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
--   Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Technologies Used
+
+-   React
+-   Vite
+-   TypeScript
+-   Context API
+-   React Router
