@@ -25,7 +25,7 @@ Implement a feature to allow campaign owner brands to filter profiles according 
 
 ## About
 
-There are three sample users. You can type any key values to filter the users şn the search bar.
+There are three sample users. You can type any key values in the search bar to filter users.
 
 ## Demo
 
