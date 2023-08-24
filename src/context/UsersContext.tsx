@@ -10,23 +10,23 @@ import { usersArray } from "../users/usersArray";
 
 type Users = { userDoc: UserDoc }[];
 
-type UserContextType = {
+type UsersContextType = {
     users: Users;
     setUsers: Dispatch<SetStateAction<Users>>;
 };
 
-export const UserContext = createContext<UserContextType>({
+export const UsersContext = createContext<UsersContextType>({
     users: usersArray,
     setUsers: () => {},
-} as UserContextType);
+} as UsersContextType);
 
 // const UserContext = createContext<Partial<UserContextType>>({});
 
-type UserProviderProps = {
+type UsersProviderProps = {
     children: ReactNode;
 };
 
-export const UserProvider = ({ children }: UserProviderProps) => {
+export const UsersProvider = ({ children }: UsersProviderProps) => {
     const [users, setUsers] = useState<Users>(usersArray);
 
     const values = {
@@ -35,6 +35,6 @@ export const UserProvider = ({ children }: UserProviderProps) => {
     };
 
     return (
-        <UserContext.Provider value={values}>{children}</UserContext.Provider>
+        <UsersContext.Provider value={values}>{children}</UsersContext.Provider>
     );
 };
